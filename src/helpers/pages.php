@@ -1,4 +1,5 @@
 <?php
-$page[0] = "mainpage.php";
-$page[1] = "product.php";
-$page[2] = "products.php";
+$page[1] = "mainpage.php";
+$page[2] = "product.php";
+$page[3] = "products.php";
+$page[4] = "input.php";
