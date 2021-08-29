@@ -23,8 +23,14 @@ if (isset($_POST["input_url"])){
     $query = $database->prepare("INSERT INTO products (name,image,price) values (?,?,?)");
     $query->execute([$product_name,$product_image,$product_price]);
     if ($query->rowCount()>0){
-        header("Location:index.php");
-        exit();
+
+        echo "Success</br>";
+        echo "<a href='index.php'>Main page</a>";
+
+    }
+    else{
+        echo "fail</br>";
+        echo "<a href='index.php'>Main page</a>";
     }
 }
 else{

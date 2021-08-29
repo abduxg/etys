@@ -11,7 +11,7 @@ $query = $database->prepare("SELECT * FROM products WHERE id=? LIMIT 1");
 $query->execute([$product_id]);
 $data = $query->fetch(PDO::FETCH_ASSOC);
 ?>
-
+<a href="index.php">Main page</a>
 <table border="1">
     <tr>
         <td width="200">product name</td>

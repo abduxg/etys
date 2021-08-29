@@ -5,7 +5,7 @@
     $datas = $query->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-
+<a href="index.php">Main page</a>
 <table border="1">
     <tr>
         <td width="50">id</td>
