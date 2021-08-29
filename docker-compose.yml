@@ -15,7 +15,7 @@ services:
     privileged: true
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: etys_db
+
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
