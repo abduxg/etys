@@ -5,4 +5,5 @@
         <input type="submit" value="send">
     </form>
 
+    <a href="index.php?page=3">Products</a>
 </div>
