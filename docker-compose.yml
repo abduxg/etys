@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./src:/var/www/html/
+  mysql:
+    image: mysql:latest
+    container_name: dev_mysql
+    privileged: true
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: etys_db
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: dev_pma
+    privileged: true
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: root
+    restart: always
+    ports:
+      - 8001:8001
